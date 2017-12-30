@@ -13,7 +13,8 @@ function updateBadgeText() {
 
 function updateTabsCount() {
     chrome.tabs.query({
-        windowType: 'normal',
+        //windowType: 'normal',
+        // include incognito windows as well
         pinned: false
     }, function (tabs) {
         tabsCount = tabs.length;
